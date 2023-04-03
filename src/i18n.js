@@ -28,9 +28,14 @@ i18n
   .init({
     lng: localStorage.getItem("i18nextLng" || "en"),
     fallbackLng: "en",
-    debug: true,
+    // debug: true,
+    debug: false,
     whitelist: availableLanguages,
     detection: option,
+    react: {
+      useSuspense: false,
+      wait: false,
+    },
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
